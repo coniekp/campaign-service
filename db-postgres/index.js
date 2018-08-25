@@ -1,15 +1,15 @@
 // const url = process.env.DATABASE_URL || "postgres://postgres:password@localhost:5432/campaign";
 // const client = new pg.Client(url);
 
-const { Client } = require('pg')
-const client = new Client ({
-  user: 'postgres',
-  host: 'localhost',
+const { Pool } = require('pg')
+const pool = new Pool ({
+  user: 'kony',
+  host: '54.183.17.226',
   database: 'campaign',
-  password: 'password',
+  password: 'Uiop7890',
   port: 5432
 })
 
 module.exports = {
-  client
+  pool
 };
