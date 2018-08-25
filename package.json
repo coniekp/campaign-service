@@ -4,7 +4,7 @@
   "description": "",
   "main": "newrelic.js",
   "scripts": {
-    "start" :"node server-postgres/index.js"
+    "start": "node server-postgres/index.js"
   },
   "author": "",
   "license": "ISC",

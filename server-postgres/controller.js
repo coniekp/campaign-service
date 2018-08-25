@@ -1,5 +1,5 @@
 const redis = require('redis')
-const cache = redis.createClient();
+const cache = redis.createClient(6379, '54.193.122.103');
 const db = require('../db-postgres/controller');
 const Log = require('log');
 
@@ -7,7 +7,7 @@ cache.on('connect', () => console.log('Connected to redis'));
 
 
 const getTiers = (req, res) => {
-	let { projectId } = req.params;
+  let { projectId } = req.params;
   let { projectName } = req.body;
 
  	cache.get(projectId , (err, cachedResults) => {
